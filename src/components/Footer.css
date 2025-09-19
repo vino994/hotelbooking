@@ -1,0 +1,12 @@
+.footer {
+  background: #111;
+  color: #fff;
+}
+.footer .social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+.footer .social-icons a:hover {
+  color: #f5c518;
+}

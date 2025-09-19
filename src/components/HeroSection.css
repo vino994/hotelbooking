@@ -1,0 +1,54 @@
+.hero-section {
+  position: relative;
+  height: 100vh; /* full viewport */
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Background slides */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.hero-slide.active {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+.fade-in.delay-1s { animation-delay: 0.5s; }
+.fade-in.delay-2s { animation-delay: 1s; }
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.book-btn {
+  transition: transform 0.3s ease;
+}
+.book-btn:hover {
+  transform: scale(1.05);
+}

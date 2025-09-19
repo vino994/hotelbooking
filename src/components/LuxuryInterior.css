@@ -1,0 +1,214 @@
+/* Section Layout */
+.luxury-section {
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Left side scroll */
+.left-side {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 15px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+.left-side::-webkit-scrollbar {
+  width: 6px;
+}
+.left-side::-webkit-scrollbar-thumb {
+  background: #ff7e5f;
+  border-radius: 10px;
+}
+
+/* Titles */
+.sub-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: #ff7e5f;
+  font-weight: bold;
+}
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Room cards */
+.room-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background: #fdfdfd;
+}
+.room-card:hover {
+  transform: translateX(8px) scale(1.02);
+  box-shadow: 0px 6px 20px rgba(255, 126, 95, 0.25);
+}
+.room-card.active {
+  border: 2px solid #ff7e5f;
+  background: linear-gradient(135deg, #fff5f5, #ffe6e6);
+}
+.room-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+.room-price span {
+  font-weight: bold;
+  color: #ff7e5f;
+}
+
+/* Buttons */
+.book-btn {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 5px 12px;
+  transition: transform 0.3s ease;
+  color: #fff;
+}
+.book-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+}
+.confirm-btn {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 18px;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.confirm-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #185a9d, #43cea2);
+}
+
+/* Big image */
+.big-room {
+  border-radius: 15px;
+  max-height: 80vh;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+}
+.animate-img {
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Price summary box */
+.price-summary {
+  background: #f8f9fa;
+  border: 1px dashed #43cea2;
+  color: #185a9d;
+  animation: slideUp 0.5s ease-in-out;
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .luxury-section {
+    padding: 10px;
+  }
+  .left-side {
+    max-height: 50vh;
+    margin-bottom: 20px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .big-room {
+    max-height: 50vh;
+  }
+}
+.toast-container {
+  z-index: 9999;
+}
+
+.toast-body {
+  font-size: 15px;
+  animation: fadeIn 0.5s ease-in-out;
+  white-space: pre-line; /* keeps line breaks */
+}
+
+/* Modal Styling */
+.modal-header-styled {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: white;
+  border-bottom: none;
+}
+.modal-header-styled .modal-title {
+  font-weight: bold;
+}
+.modal-body-styled {
+  background: #fdfdfd;
+  padding: 20px;
+  border-radius: 0 0 12px 12px;
+}
+.price-text {
+  color: #185a9d;
+  font-weight: 600;
+}
+
+/* Fancy form inputs */
+.fancy-input {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+.fancy-input:focus {
+  border-color: #ff7e5f;
+  box-shadow: 0px 0px 8px rgba(255, 126, 95, 0.5);
+  outline: none;
+}
+
+/* Date picker customization */
+.react-datepicker {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+.react-datepicker__header {
+  background: #ff7e5f;
+  border-bottom: none;
+  color: white;
+}
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background: #185a9d !important;
+  border-radius: 50%;
+}
+.react-datepicker__day:hover {
+  background: #43cea2;
+  border-radius: 50%;
+  color: white;
+}
