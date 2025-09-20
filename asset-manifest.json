@@ -1,22 +1,31 @@
 {
   "files": {
-    "main.css": "/hotelbooking/static/css/main.4ba9432e.css",
-    "main.js": "/hotelbooking/static/js/main.3053ce0f.js",
+    "main.css": "/hotelbooking/static/css/main.705f0a53.css",
+    "main.js": "/hotelbooking/static/js/main.77bb0ef2.js",
     "static/media/h12.jpg": "/hotelbooking/static/media/h12.56e68ece3a991b404bec.jpg",
     "static/media/h11.jpg": "/hotelbooking/static/media/h11.219933ea42e0f1c3b278.jpg",
     "static/media/h13.jpg": "/hotelbooking/static/media/h13.0c5c97eaa89b4022a480.jpg",
     "static/media/h5.jpg": "/hotelbooking/static/media/h5.ad64bedbc7810bd6e3ab.jpg",
     "static/media/h2.jpg": "/hotelbooking/static/media/h2.811e392957ceae277340.jpg",
+    "static/media/h1.jpg": "/hotelbooking/static/media/h1.190f4769f0878cc9f93d.jpg",
+    "static/media/h3.jpg": "/hotelbooking/static/media/h3.b8a0fb8da5ebbd5090b9.jpg",
+    "static/media/h14.jpg": "/hotelbooking/static/media/h14.9c13c926a6d08d610a32.jpg",
     "static/media/h6.jpg": "/hotelbooking/static/media/h6.cb193075669bc8fb6914.jpg",
+    "static/media/h10.jpg": "/hotelbooking/static/media/h10.f708616a3c254eb4243e.jpg",
     "static/media/h8.jpg": "/hotelbooking/static/media/h8.cef97ca2a99a2e7024ff.jpg",
+    "static/media/h9.jpg": "/hotelbooking/static/media/h9.b9d86775c61a499d6aa0.jpg",
+    "static/media/h15.jpg": "/hotelbooking/static/media/h15.5f6c0c4739a12f62d8b4.jpg",
     "static/media/h7.jpg": "/hotelbooking/static/media/h7.4fdc7487891811c795bd.jpg",
     "static/media/h4.jpg": "/hotelbooking/static/media/h4.6fed0197eb3285e392ec.jpg",
+    "static/media/h21.jpg": "/hotelbooking/static/media/h21.eb7d37e7843c4ba6d18e.jpg",
+    "static/media/h19.webp": "/hotelbooking/static/media/h19.e1fc3695007dd0b227e1.webp",
+    "static/media/h20.jpg": "/hotelbooking/static/media/h20.488eb81927a9c16b4d4f.jpg",
     "index.html": "/hotelbooking/index.html",
-    "main.4ba9432e.css.map": "/hotelbooking/static/css/main.4ba9432e.css.map",
-    "main.3053ce0f.js.map": "/hotelbooking/static/js/main.3053ce0f.js.map"
+    "main.705f0a53.css.map": "/hotelbooking/static/css/main.705f0a53.css.map",
+    "main.77bb0ef2.js.map": "/hotelbooking/static/js/main.77bb0ef2.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ba9432e.css",
-    "static/js/main.3053ce0f.js"
+    "static/css/main.705f0a53.css",
+    "static/js/main.77bb0ef2.js"
   ]
 }
