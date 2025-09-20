@@ -1,10 +1,14 @@
 import React, { useState } from "react";
-import { Row, Col, Button, Form } from "react-bootstrap";
+import { Row, Col, Button, Form, Carousel } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import { FaCalendarAlt, FaUsers, FaDollarSign } from "react-icons/fa";
 import "react-datepicker/dist/react-datepicker.css";
 import "./MainCard.css";
-import sampleImage from "../assets/h7.jpg";
+
+// Sample images for carousel
+import img1 from "../assets/h7.jpg";
+import img2 from "../assets/h11.jpg";
+import img3 from "../assets/h12.jpg";
 
 export default function MainCard() {
   const today = new Date();
@@ -53,9 +57,33 @@ export default function MainCard() {
           </Row>
         </div>
 
-        {/* Image */}
+        {/* Carousel Section */}
         <div className="main-card-body text-center">
-          <img src={sampleImage} alt="Hotel view" className="main-img mb-4" />
+          <Carousel fade interval={4000} className="main-carousel">
+            <Carousel.Item>
+              <img src={img1} className="d-block w-100 main-img" alt="Hotel 1" />
+              <Carousel.Caption>
+                <h3>Welcome to EliteStay</h3>
+                <p>Luxury & Comfort Redefined</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <img src={img2} className="d-block w-100 main-img" alt="Hotel 2" />
+              <Carousel.Caption>
+                <h3>Elegant Interiors</h3>
+                <p>Experience premium rooms & suites</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <img src={img3} className="d-block w-100 main-img" alt="Hotel 3" />
+              <Carousel.Caption>
+                <h3>Memorable Dining</h3>
+                <p>Delicious cuisines from around the world</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
         </div>
       </div>
 

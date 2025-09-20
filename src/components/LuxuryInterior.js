@@ -18,11 +18,36 @@ import bigRoom from "../assets/h2.jpg";
 
 export default function LuxuryInterior() {
   const rooms = [
-    { title: "Classic Room", price: 39, img: room1 },
-    { title: "Grand Deluxe Room", price: 59, img: room2 },
-    { title: "Ultra Superior Room", price: 79, img: room3 },
-    { title: "Grand Deluxe Room", price: 59, img: room2 },
-    { title: "Ultra Superior Room", price: 79, img: room3 },
+    {
+      title: "Classic Room",
+      price: 2999,
+      img: room1,
+      desc: "Perfect for business travellers and couples. Enjoy complimentary Wi-Fi, cozy interiors, and 24x7 room service.",
+    },
+    {
+      title: "Grand Deluxe Room",
+      price: 4599,
+      img: room2,
+      desc: "Spacious rooms with modern décor, king-sized beds, private balcony, and complimentary breakfast.",
+    },
+    {
+      title: "Ultra Superior Room",
+      price: 6499,
+      img: room3,
+      desc: "Experience premium luxury with elegant interiors, pool view, mini bar, and exclusive lounge access.",
+    },
+    {
+      title: "Royal Suite",
+      price: 8999,
+      img: room2,
+      desc: "The ultimate indulgence! Separate living area, private jacuzzi, and curated fine dining experience.",
+    },
+    {
+      title: "Family Room",
+      price: 7599,
+      img: room3,
+      desc: "Designed for family stays with extra space, 2 queen beds, entertainment system, and kids-friendly amenities.",
+    },
   ];
 
   const [selectedRoom, setSelectedRoom] = useState(bigRoom);
@@ -44,7 +69,6 @@ export default function LuxuryInterior() {
     setModalShow(true);
   };
 
-  // Calculate number of nights & total price
   const calculateNights = () => {
     if (!checkIn || !checkOut) return 0;
     const diffTime = checkOut - checkIn;
@@ -70,12 +94,11 @@ export default function LuxuryInterior() {
     }
 
     showToastMessage(
-      `✅ Booking Confirmed!\nRoom: ${activeRoom.title}\nGuests: ${guests}\nTotal: $${totalPrice}`,
+      `✅ Booking Confirmed!\nRoom: ${activeRoom.title}\nGuests: ${guests}\nTotal: ₹${totalPrice}`,
       "success"
     );
     setModalShow(false);
 
-    // Reset form
     setCheckIn(null);
     setCheckOut(null);
     setGuests("1");
@@ -88,7 +111,7 @@ export default function LuxuryInterior() {
           {/* Left Side - Scrollable */}
           <Col md={5} xs={12} className="left-side mb-4 mb-md-0">
             <p className="sub-title">DISCOVER OUR ROOMS</p>
-            <h2 className="title">Luxury Interior</h2>
+            <h2 className="title">Luxury Interiors Inspired by India</h2>
             <div className="room-list mt-4">
               {rooms.map((room, index) => (
                 <Card
@@ -108,7 +131,11 @@ export default function LuxuryInterior() {
                           {room.title}
                         </Card.Title>
                         <Card.Text className="room-price">
-                          Starting from: <span>${room.price}.00/Night</span>
+                          Starting from:{" "}
+                          <span>₹{room.price.toLocaleString("en-IN")}/Night</span>
+                        </Card.Text>
+                        <Card.Text className="room-desc small text-muted">
+                          {room.desc}
                         </Card.Text>
                         <Button
                           size="sm"
@@ -163,10 +190,10 @@ export default function LuxuryInterior() {
                 className="img-fluid rounded mb-3 shadow-sm"
               />
               <p className="price-text">
-                <strong>Price per Night:</strong> ${activeRoom.price}
+                <strong>Price per Night:</strong> ₹
+                {activeRoom.price.toLocaleString("en-IN")}
               </p>
 
-              {/* Booking Form */}
               <Form>
                 <Form.Group className="mb-3">
                   <Form.Label>Check-in Date</Form.Label>
@@ -216,7 +243,8 @@ export default function LuxuryInterior() {
                       <strong>Nights:</strong> {calculateNights()}
                     </p>
                     <p>
-                      <strong>Total Price:</strong> ${totalPrice}
+                      <strong>Total Price:</strong> ₹
+                      {totalPrice.toLocaleString("en-IN")}
                     </p>
                   </div>
                 )}
